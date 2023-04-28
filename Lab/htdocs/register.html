@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新使用者註冊</title>
+    <style>
+        /* 置中 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        /* CSS樣式 */
+        form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            max-width: 400px;
+            width: 100%;
+        }
+        input[type="SID"],
+        input[type="password"],
+        input[type="name"],
+        input[type="serial_number"],
+        input[type="email"],
+        input[type="phone"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="register.php">
+        <h1>新使用者註冊</h1>
+        <label for="SID">學號:</label>
+        <input type="SID" id="SID" name="SID" required>
+        <br>
+        <label for="password">密碼:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="name">姓名:</label>
+        <input type="name" id="name" name="name" required>
+        <br>
+        <label for="serial_number">實驗室編號(或辦公室編號):</label>
+        <input type="serial_number" id="serial_number" name="serial_number" required>
+        <br>
+        <label for="email">電子郵件:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="phone">連絡電話:</label>
+        <input type="phone" id="phone" name="phone" required>
+        <br>
+        <input type="submit" value="註冊">
+    </form>
+</body>
+</html>
