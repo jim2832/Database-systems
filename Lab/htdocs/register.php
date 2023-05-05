@@ -7,7 +7,7 @@ $username = 'root';
 # 密碼
 $password = '';
 # 資料庫名稱
-$database = '使用者資料表';
+$database = '資料庫';
 # 連接資料庫
 $connect = new mysqli($host, $username, $password, $database);
 
@@ -25,13 +25,17 @@ $serial_number = $_POST['serial_number'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 
-# 執行SQL操作
-$sql = "INSERT INTO 使用者資料表 (學號, 密碼, 姓名, 實驗室編號, Email, 連絡電話) VALUES ('$SID', '$password', '$name', '$serial_number', '$email', '$phone')";
+#權限
+$permission = 0;
 
-# 驗證是否有插入成功
+# 執行SQL操作
+$sql = "INSERT INTO 使用者資料表 (ID, 密碼, 姓名, 實驗室編號或辦公室編號, Email, 聯絡電話, 權限)
+        VALUES ('$SID', '$password', '$name', '$serial_number', '$email', '$phone', '$permission')";
+
+# 驗證是否有插入表格成功
 if(mysqli_query($connect, $sql)){
     if(mysqli_affected_rows($connect) > 0){
-        echo "註冊成功!";
+        echo "註冊成功! 即將為您導回登入畫面...";
         header("Refresh: 2; URL=login.html");
         exit();
     }

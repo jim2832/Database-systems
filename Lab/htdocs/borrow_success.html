@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>借用成功</title>
+	<style>
+		.center {
+			position: absolute;
+			top: 45%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+        .submit {
+            font-size: 20px;
+            position: absolute;
+			top: 55%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+            background-color: #1997ff;
+            width: 300px;
+            display: block;
+            margin: 0 auto;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+	</style>
+</head>
+<body>
+	<div class="center" style="font-size: 50px;">借用成功!</div>
+        <form action="borrow_success.php" method="POST">
+            <input type="submit" class="submit" name="success" value="列印申請表">
+        </form>
+</body>
+</html>
