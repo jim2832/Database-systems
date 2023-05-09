@@ -5,7 +5,11 @@
 	<title>教室借用歷史紀錄</title>
 	<style>
 		body{
-			background-color: #f8f8d9;
+			background-image: url("./classroom.jpg");
+			background-color: rgba(255,255,255,0.2);
+			background-blend-mode: lighten;
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 
 		table {
@@ -18,6 +22,7 @@
 			border: 1px solid black;
 			padding: 10px;
 			text-align: center;
+			background-color: white;
 		}
 
 		table th {

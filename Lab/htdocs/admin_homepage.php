@@ -5,7 +5,11 @@
 	<title>教室借用狀態</title>
 	<style>
 		body{
-			background-color: #f8f8d9;
+			background-image: url("./classroom.jpg");
+			background-color: rgba(255,255,255,0.2);
+    		background-blend-mode: lighten;
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 
 		table {
@@ -18,6 +22,7 @@
 			border: 1px solid black;
 			padding: 10px;
 			text-align: center;
+			background-color: white;
 		}
 
 		table th {
@@ -55,8 +60,11 @@
 </head>
 
 <body>
-	<h1>使用者資料</h1>
-	<form action="admin_operation.php" method="POST">
+	<form action='logout.php' method='POST' style='width: 70px; height: 50px; position: absolute; top: 30px; right: 20px;' >
+		<button type='submit' name='logout'>登出</button><br><br>
+	</form>
+	<h1>使用者資料列表</h1>
+	<form action="admin_management.php" method="POST">
 		<table>
 			<tr>
 				<th>ID</th>

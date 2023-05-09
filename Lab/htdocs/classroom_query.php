@@ -40,10 +40,11 @@ if(isset($_POST['query_button'])){
         exit();
     }
 
-    echo "教室 $query_id 在 $query_date 已被借用的節數為: <br>";
+    echo "教室 $query_id 在 $query_date 已被借用的節數為: ";
     foreach ($periods as $element){
-        echo "$element <br>";
+        echo "$element ";
     }
+    echo "節";
 }
 
 ?>

@@ -1,5 +1,9 @@
 body{
-	background-color:white;
+	background-image: url("./classroom.jpg");
+	background-color: rgba(255,255,255,0.2);
+	background-blend-mode: lighten;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .container {
@@ -10,7 +14,7 @@ body{
 
 .left {
 	flex: 1;
-	padding: 20px;
+	padding: 30px;
 	border: 1px solid black;
 	border-radius: 10px;
 	background-color:white;
@@ -18,7 +22,7 @@ body{
 
 .right {
 	flex: 1;
-	padding: 30px;
+	padding: 40px;
 	border: 1px solid black;
 	border-radius: 10px;
 	background-color:white(183, 228, 255);
@@ -42,7 +46,7 @@ input {
 }
 
 input[type=submit] {
-	background-color: #5eccff;
+	background-color: #4b93ff;
     width: 200px;
     display: block;
     margin: 0 auto;
@@ -55,12 +59,12 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-	background-color: #3e8e41;
+	background-color: #1e78ff;
 }
 
 th {
 	padding-right: 100px;
-	background-color: #a8ffe5;
+	background-color: #7ac3ff;
 	border: 1px solid black;
 }
 

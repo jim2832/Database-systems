@@ -45,18 +45,18 @@ if(mysqli_num_rows($exist_result)){
 		#判斷用戶為學生還是系辦
 		$permission_row = mysqli_fetch_assoc($permission_result);
 		if(!$permission_row['權限']){
-			echo "登入成功! (登入身分為學生)";
+			echo "登入成功! (登入身份為學生)";
 			header("Refresh: 1; URL=student_homepage.php"); #跳轉至學生借用畫面
 			exit();
 		}
 		else if($permission_row['權限'] == 1){
-			echo "登入成功! (登入身分為系辦)";
+			echo "登入成功! (登入身份為系辦)";
 			header("Refresh: 1; URL=office_homepage.php"); #跳轉至系辦管理畫面
 			exit();
 		}
 		else{
-			echo "登入成功! (登入身分為系統管理者)";
-			header("Refresh: 1; URL=admin.php"); #跳轉至系辦管理畫面
+			echo "登入成功! (登入身份為系統管理者)";
+			header("Refresh: 1; URL=admin_homepage.php"); #跳轉至系辦管理畫面
 			exit();
 		}
 	}

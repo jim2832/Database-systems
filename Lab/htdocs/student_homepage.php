@@ -13,11 +13,14 @@
       <div class="classroom_info">
         <?php
         session_start();
-        echo "<h1>親愛的貴賓 ";
+        echo "<h1>";
         echo $_SESSION['借用人姓名'];
-        echo "，您好!</h1><br>"
+        echo "，您好!</h1>";
+        echo "<form action='logout.php' method='POST' style='width: 70px; height: 70px;'>
+                <button type='submit' name='logout'>登出</button><br><br>
+              </form>";
         ?>
-        <h2>教室資訊</h2>
+        <h1>教室資訊</h1>
         <table>
 
           <tr>
@@ -53,13 +56,14 @@
 
       <div class="borrow">
         <form action="classroom_query.php" method="POST">
-          <h2>查詢教室是否被借用</h2>
+          <h1>查詢教室是否被借用</h1>
 
-          <label for="classroom_query">請輸入要查詢的教室編號：</label>
+          <!-- <label for="classroom_query">請輸入要查詢的教室編號：</label> -->
+          <h3>請輸入要查詢的教室編號：</h3>
           <input type="text" name="query_id" style="width: 50%">
-          <br>
 
-          <label for="date_query">請輸入要查詢的日期：</label>
+          <!-- <label for="date_query">請輸入要查詢的日期：</label> -->
+          <h3>請輸入要查詢的日期：</h3>
           <input type="date" name="query_date" style="width: 50%">
           <br>
           
@@ -74,31 +78,29 @@
 			<h1>教室借用表單</h1>
 			<form action="classroom_borrow.php" method="post">
         <br>
-				<label for="borrower">借用人學號：</label>
+        <h3>借用人學號：</h3>
 
-				<!-- <input type="text" name="borrower" required> -->
         <?php 
         echo $_SESSION['借用人學號'];
         ?>
-				<br><br><br>
+				<br><br>
 
-        <label for="name">姓名：</label>
-				<!-- <input type="text" name="name" required> -->
+        <h3>借用人姓名：</h3>
         <?php 
         echo $_SESSION['借用人姓名'];
         ?>
 				<br><br><br>
 
-				<label for="room_no">要借用的教室編號：</label>
-				<input type="text" name="room_no" required>
+        <h3>要借用的教室編號：</h3>
+				<input type="text" name="room_no" style="width: 75%" required>
 				<br>
 
 
-				<label for="date">日期：</label>
-				<input type="date" name="date" required>
+				<h3>日期：</h3>
+        <input type="date" name="date" style="width: 75%" required>
 				<br>
 
-				<label for="period">節數：</label>
+				<h3>節數：</h3>
         <div class="period">
           <input type="checkbox" id="checkbox1" name="period1">
           <label for="checkbox1">第一節</label>
@@ -119,15 +121,8 @@
         </div>
 				<br>
 
-				<!-- <label for="purpose">用途：</label>
-				<input type="text" name="purpose" required>
-				<br> -->
 
-				<!-- <label for="return_date">歸還日期：</label>
-				<input type="date" name="return_date" required>
-				<br> -->
-
-        <label for="device">附加申請設備：</label>
+        <h3>附加申請設備：</h3>
         <div class="device">
           <input type="checkbox" id="laptop" name="device1">
           <label for="laptop">筆記型電腦</label>

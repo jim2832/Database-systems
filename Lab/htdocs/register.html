@@ -10,6 +10,11 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-image: url("./classroom.jpg");
+			background-color: rgba(255,255,255,0.2);
+    		background-blend-mode: lighten;
+			background-size: cover;
+			background-repeat: no-repeat;
         }
         /* CSS樣式 */
         form {
@@ -51,24 +56,30 @@
 <body>
     <form method="post" action="register.php">
         <h1>新使用者註冊</h1>
-        <label for="SID">學號:</label>
+        <!-- <label for="SID">學號:</label> -->
+        <h3>學號:</h3>
         <input type="SID" id="SID" name="SID" required>
-        <br>
-        <label for="password">密碼:</label>
+        
+        <!-- <label for="password">密碼:</label> -->
+        <h3>密碼:</h3>
         <input type="password" id="password" name="password" required>
-        <br>
-        <label for="name">姓名:</label>
+        
+        <!-- <label for="name">姓名:</label> -->
+        <h3>姓名:</h3>
         <input type="name" id="name" name="name" required>
-        <br>
-        <label for="serial_number">實驗室編號(或辦公室編號):</label>
+        
+        <!-- <label for="serial_number">實驗室編號:</label> -->
+        <h3>實驗室編號:</h3>
         <input type="serial_number" id="serial_number" name="serial_number" required>
-        <br>
-        <label for="email">電子郵件:</label>
+        
+        <!-- <label for="email">電子郵件:</label> -->
+        <h3>電子郵件:</h3>
         <input type="email" id="email" name="email" required>
-        <br>
-        <label for="phone">連絡電話:</label>
+        
+        <!-- <label for="phone">聯絡電話:</label> -->
+        <h3>聯絡電話:</h3>
         <input type="phone" id="phone" name="phone" required>
-        <br>
+        
         <input type="submit" value="註冊">
     </form>
 </body>
