@@ -67,7 +67,7 @@
           <input type="date" name="query_date" style="width: 50%">
           <br>
           
-          <button type="submit" name="query_button" style="width: 8%">查詢</button>
+          <button type="submit" name="query_button" style="width: 10%">查詢</button>
           
         </form>
       </div>
